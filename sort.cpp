@@ -8,7 +8,20 @@
 using namespace std;
 
 int selection();
+int curNumb;
 char text[100];
+
+int main ()
+ {
+   setlocale (LC_ALL, "RUSSIAN");	
+   FILE *f;
+   f=fopen("stroka.txt","r");
+   fgets(text,100,f);
+   puts (text);
+   selection();
+   fclose(f);
+   return 0;
+ }
 
 int selection ()
  {
