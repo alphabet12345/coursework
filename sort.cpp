@@ -1,9 +1,7 @@
 #include <iostream>
 #include <string.h>
-#include <stdio.h>
-#include <math.h>
 #include <locale.h>
-#include <cstdlib>
+#include <cstring>
 
 using namespace std;
 
@@ -25,26 +23,31 @@ int main ()
 
 int selection ()
  {
+   string words[20] = {""};
+   int wordsAmount = -1;
    curNumb=0;
-   int k, q ,c;
+   int k, q , c, o, p, l;
    int d;
+   int y[p];
    char slovo[13];
+   char u[o];
+   char temp;
    k=strlen(text);
    int i=0, j=0;
    while (i<k) 
-	{
+    {
       j=0;
+      wordsAmount++;
       while((text[i]!=' ')&&(text[i]!='\0')) 
-		{
-		  slovo[j]=text[i];
+	{
+	  slovo[j]=text[i];
+          words[wordsAmount] += text[i];
           i++;
           j++;
         }
       i++;
-      slovo[j]='\0';
-	  puts(slovo);
-	 
-	  d=strlen(slovo); 
-	}
+    } 
  }
+
+
 
