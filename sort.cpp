@@ -6,8 +6,12 @@
 using namespace std;
 
 int selection();
+bool isLess(string a, string b);
+bool isLess(string a, string b);
 int curNumb;
 char text[100];
+char temp;
+int const n = 100;
 
 int main ()
  {
@@ -47,6 +51,11 @@ int selection ()
         }
       i++;
     } 
+   selectSort(words,wordsAmount);
+   for(int _i=0; _i<wordsAmount; _i++) 
+    {
+      cout << words[_i] << endl;
+    }
  }
 
 bool isLess(string a, string b) 
@@ -69,4 +78,19 @@ bool isLess(string a, string b)
 	
    return 0;
  }
+
+void selectSort(string a[], int N)
+ {
+   int k;
+   for(int i=0; i<N-1; ++i) 
+    {
+      k = i;
+      for(int j=i+1; j<N; ++j) 
+       {
+         if (isLess(a[j],a[k])) k = j;
+       }
+      swap(a[i],a[k]);
+    }    
+   return;
+}
 
