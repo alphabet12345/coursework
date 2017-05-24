@@ -49,5 +49,24 @@ int selection ()
     } 
  }
 
-
+bool isLess(string a, string b) 
+ {
+   int aLen = a.length();
+   int bLen = b.length();
+   int len = aLen;
+   if (bLen < aLen) len = bLen;
+    for(int i=0; i<len; i++) 
+      {		
+	if (a[i] < b[i]) 
+          {			
+    	    return 1;	
+	  }
+        if (a[i] > b[i]) 
+          {			
+	    return 0;	
+          }
+       }
+	
+   return 0;
+ }
 
