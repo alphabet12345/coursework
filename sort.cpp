@@ -7,7 +7,7 @@ using namespace std;
 
 int selection();
 bool isLess(string a, string b);
-bool isLess(string a, string b);
+void selectSort(string a[], int N);
 int curNumb;
 char text[100];
 char temp;
