@@ -23,7 +23,7 @@ int main ()
    selection();
    fclose(f);
    return 0;
- }
+ } 
  
 int selection () 
  {
