@@ -81,6 +81,22 @@ bool isLess(string a, string b)
    return 0;
  }
 
+int swap(char a[], char b[]) 
+ {
+   int aLen = strlen(a);
+   int bLen = strlen(b);
+   int len = aLen;
+   if (bLen > aLen) len = bLen;
+    for(int i=0; i<=len; i++) 
+     {
+       char buf;
+       buf = a[i];
+       a[i] = b[i];
+       b[i] = buf;
+     }
+   return 0;
+ }
+
 void selectSort(string a[], int N) 
  {
    int k; 
