@@ -24,7 +24,7 @@ test:  build/test.o build/unit.o
 	gcc $(FLAGS) build/unit.o build/test.o -o bin/app_test
 
 clean:
-	rm obj/*.o
+	rm build/*.o
 
 run:
 	./bin/app
