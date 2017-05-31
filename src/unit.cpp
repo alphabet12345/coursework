@@ -47,6 +47,23 @@ int isLess(char a[], char b[]) {
    return 0;
  }
 
+ int isMore(char a[], char b[]) {
+    int aLen = strlen(a);
+    int bLen = strlen(b);
+    int len = aLen;
+    if (bLen < aLen) len = bLen;
+    for(int i=0; i<len; i++) {
+ 	  if (a[i] < b[i]) {
+ 		 return 0;
+ 	   }
+ 	  if (a[i] > b[i]) {
+ 		 return 1;
+ 	   }
+ 	 }
+
+    return 0;
+  }
+
 int swap(char a[], char b[]) {
     int aLen = strlen(a);
     int bLen = strlen(b);
@@ -63,7 +80,7 @@ int swap(char a[], char b[]) {
     return 0;
 }
 
-void selectSort(char a[][20], int N) {
+int selectSort(char a[][20], int N) {
    int k;
    for(int i=0; i<N-1; ++i) {
       k = i;
@@ -72,5 +89,10 @@ void selectSort(char a[][20], int N) {
         }
       swap(a[i],a[k]);
      }
-   return;
+
+   int series = 1;
+   for (int i=0; i<N-1; i++) {
+       if (isMore(a[i],a[i+1])) series += 1;
+   }
+   return series;
  }
