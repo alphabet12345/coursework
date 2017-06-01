@@ -6,7 +6,6 @@
 
 int main () {
     char text[8000];
-    char temp;
     setlocale (LC_ALL, "RUSSIAN");
     FILE *f;
     f=fopen("stroka.txt","r");

@@ -70,12 +70,7 @@ int selectSort(char a[][20], int N) {
 int selection (char text[]) {
    char words[20][20];
    int wordsAmount = -1;
-   int curNumb;
-   curNumb=0;
-   int k, p, l;
-   int d;
-   char slovo[13];
-   char temp;
+   int k;
    k=strlen(text);
    int i=0, j=0;
    while (i<k) {
