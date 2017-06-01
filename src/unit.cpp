@@ -1,35 +1,5 @@
 #include "unit.h"
 
-int selection (char text[]) {
-   char words[20][20];
-   int wordsAmount = -1;
-   int curNumb;
-   curNumb=0;
-   int k, p, l;
-   int d;
-   char slovo[13];
-   char temp;
-   k=strlen(text);
-   int i=0, j=0;
-   while (i<k) {
-      j=0;
-      wordsAmount++;
-      while((text[i]!=' ')&&(text[i]!='\0')) {
-		  words[wordsAmount][j] = text[i];
-          i++;
-          j++;
-        }
-        words[wordsAmount][j] = 0;
-      i++;
-    }
-	selectSort(words,wordsAmount+1);
-    for(int var = 0; var <= wordsAmount; var++) {
-        printf("%s\n",words[var]);
-    }
-     return 0;
- }
-
-
 int isLess(char a[], char b[]) {
    int aLen = strlen(a);
    int bLen = strlen(b);
@@ -95,4 +65,33 @@ int selectSort(char a[][20], int N) {
        if (isMore(a[i],a[i+1])) series += 1;
    }
    return series;
+ }
+
+int selection (char text[]) {
+   char words[20][20];
+   int wordsAmount = -1;
+   int curNumb;
+   curNumb=0;
+   int k, p, l;
+   int d;
+   char slovo[13];
+   char temp;
+   k=strlen(text);
+   int i=0, j=0;
+   while (i<k) {
+      j=0;
+      wordsAmount++;
+      while((text[i]!=' ')&&(text[i]!='\0')) {
+		  words[wordsAmount][j] = text[i];
+          i++;
+          j++;
+        }
+        words[wordsAmount][j] = 0;
+      i++;
+    }
+	selectSort(words,wordsAmount+1);
+    for(int var = 0; var <= wordsAmount; var++) {
+        printf("%s\n",words[var]);
+    }
+     return 0;
  }
