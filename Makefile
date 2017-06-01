@@ -1,4 +1,4 @@
-FLAGS = -Wall -std=c11
+FLAGS = -Wall -Werror
 HEADERS = -I test
 
 all: build
