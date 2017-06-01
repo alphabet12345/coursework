@@ -5,14 +5,12 @@
 #include "unit.h"
 
 int main () {
-    char text[1000];
+    char text[8000];
     char temp;
-    int const n = 100;
-
     setlocale (LC_ALL, "RUSSIAN");
     FILE *f;
     f=fopen("stroka.txt","r");
-    fgets(text,1000,f);
+    fgets(text,8000,f);
     puts (text);
     selection(text);
     fclose(f);
