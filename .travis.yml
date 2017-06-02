@@ -1,3 +1,2 @@
 language: c
-install: make
-script: ./bin/app_test
+ script: make
