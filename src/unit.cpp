@@ -50,7 +50,7 @@ int swap(char a[], char b[]) {
     return 0;
 }
 
-int selectSort(char a[][20], int N) {
+int selectSort(char a[][100], int N) {
    int k;
    for(int i=0; i<N-1; ++i) {
       k = i;
@@ -68,7 +68,7 @@ int selectSort(char a[][20], int N) {
  }
 
 int selection (char text[]) {
-   char words[20][20];
+   char words[100][100];
    int wordsAmount = -1;
    int k;
    k=strlen(text);
