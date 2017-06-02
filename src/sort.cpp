@@ -1,10 +1,10 @@
 #include <cstring>
 #include <string>
 #include <cstdio>
-
 #include "unit.h"
 
-int main () {
+int main ()
+ {
     char text[8000];
     setlocale (LC_ALL, "RUSSIAN");
     FILE *f;
