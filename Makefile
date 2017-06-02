@@ -1,5 +1,4 @@
 FLAGS = -Wall -Werror
-HEADERS = -I test
 
 all: build
 
